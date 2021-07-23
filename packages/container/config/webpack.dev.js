@@ -4,6 +4,8 @@ const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
+const packageJson = require('../package.json');
+
 const devConfig = {
   mode: 'development',
   devServer: {
@@ -25,6 +27,7 @@ const devConfig = {
          * 'marketing@http://localhost:8081/remoteEntry.js' - here marketing should be same name exposed by MFE
          */
       },
+      shared: packageJson.dependencies,
     }),
   ],
 };
