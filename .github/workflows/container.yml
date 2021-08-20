@@ -29,6 +29,7 @@ jobs:
           heroku_email: 'gayathri.rajamanickam@tesco.com'
           dontautocreate: true
           dontuseforce: 1
+          appdir: packages/container
 
       # - name: Heroku login credentials
       #   run: |
